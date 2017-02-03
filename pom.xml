@@ -3,116 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>3</groupId>
+    <groupId>bcmpz</groupId>
     <artifactId>3</artifactId>
-    <version>0.1-Install</version>
-    <packaging>jar</packaging>
+    <version>0.1</version>
+    <packaging>pom</packaging>
 
     <name>SousEntendu</name>
     <url>http://www.tozland.tk/</url>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <compiler.source>1.8</compiler.source>
-        <compiler.target>1.8</compiler.target>
-        <sonar.exclusions>Runner.class, Runner.java</sonar.exclusions>
-    </properties>
-
-    <repositories>
-        <repository>
-            <id>oss.sonatype.org-releases</id>
-            <name>releases</name>
-            <url>http://oss.sonatype.org/content/repositories/releases</url>
-        </repository>
-
-        <repository>
-            <id>oss.sonatype.org-snapshots</id>
-            <name>snapshots</name>
-            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
-        </repository>
-
-        <repository>
-            <id>central</id>
-            <name>Maven repository</name>
-            <url>http://repo1.maven.org/maven2</url>
-        </repository>
-    </repositories>
-
-    <dependencies>
-        <dependency>
-            <groupId>eu.ace-design</groupId>
-            <artifactId>island-player</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>eu.ace-design</groupId>
-            <artifactId>island-runner</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20150729</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
-        <dependency>
-            <groupId>fr.inria.gforge.spoon</groupId>
-            <artifactId>spoon-core</artifactId>
-            <version>5.5.0</version>
-        </dependency>
-
-    </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>fr.inria.gforge.spoon</groupId>
-                <artifactId>spoon-maven-plugin</artifactId>
-                <version>2.2</version>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <processors>
-                        <processor>spoon.processors.CatchProcessor</processor>
-                    </processors>
-                </configuration>
-
-                <!-- To be sure that you use the latest version of Spoon, specify it as dependency. -->
-                <dependencies>
-                    <dependency>
-                        <groupId>fr.inria.gforge.spoon</groupId>
-                        <artifactId>spoon-core</artifactId>
-                        <version>5.5.0</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
+    <modules>
+        <module>devops</module>
+        <module>island</module>
+    </modules>
 
 </project>

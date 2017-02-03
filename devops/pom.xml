@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>devops</artifactId>
+    <version>0.1-devops</version>
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>bcmpz</groupId>
+        <artifactId>3</artifactId>
+        <version>0.1</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>fr.inria.gforge.spoon</groupId>
+            <artifactId>spoon-core</artifactId>
+            <version>5.5.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
