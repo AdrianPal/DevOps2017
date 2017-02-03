@@ -3,13 +3,13 @@
 	 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>fr.unice.polytech.3a.qgl</groupId>
-  <artifactId>qcd</artifactId> <!-- CHANGE ME -->
-  <version>0.1-SNAPSHOT</version>
+  <groupId>3</groupId>
+  <artifactId>3</artifactId>
+  <version>0.1-Install</version>
   <packaging>jar</packaging>
 
-  <name>Patman</name> <!-- CHANGE ME -->
-  <url>http://www.i3s.unice.fr/~mosser/teaching/15_16/se</url>
+  <name>SousEntendu</name>
+  <url>http://www.tozland.tk/</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
