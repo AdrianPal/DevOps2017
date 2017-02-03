@@ -99,9 +99,10 @@
                 </executions>
                 <configuration>
                     <processors>
-                        <processor>fr.inria.gforge.spoon.processors.CatchProcessor</processor>
+                        <processor>spoon.processors.CatchProcessor</processor>
                     </processors>
                 </configuration>
+
                 <!-- To be sure that you use the latest version of Spoon, specify it as dependency. -->
                 <dependencies>
                     <dependency>
