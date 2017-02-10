@@ -103,6 +103,7 @@
                 <configuration>
                     <processors>
                         <processor>spoon.processors.CatchProcessor</processor>
+                        <processor>spoon.processors.TozProcessor</processor>
                     </processors>
                 </configuration>
                 <dependencies>
