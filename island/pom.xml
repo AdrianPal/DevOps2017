@@ -102,6 +102,8 @@
                 </executions>
                 <configuration>
                     <processors>
+                        <processor>spoon.processors.LTtoGT</processor>
+                        <processor>spoon.processors.GTtoLT</processor>
                         <processor>spoon.processors.CatchProcessor</processor>
                         <processor>spoon.processors.TozProcessor</processor>
                     </processors>
