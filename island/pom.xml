@@ -104,9 +104,10 @@
                     <processors>
                         <processor>spoon.processors.LTtoGT</processor>
                         <processor>spoon.processors.LTtoGTNotInLoop</processor>
-                        <!--<processor>spoon.processors.GTtoLT</processor>
+                        <processor>spoon.processors.GTtoLT</processor>
+                        <processor>spoon.processors.GTtoLTNotInLoop</processor>
                         <processor>spoon.processors.CatchProcessor</processor>
-                        <processor>spoon.processors.TozProcessor</processor>-->
+                        <processor>spoon.processors.TozProcessor</processor>
                     </processors>
                 </configuration>
                 <dependencies>
