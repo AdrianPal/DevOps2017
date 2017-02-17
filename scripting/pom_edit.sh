@@ -1,19 +1,39 @@
 #!/bin/bash
 
-# Compile the simulation project.
-# Created by Adrian PALUMBO.
+#################################################
+# USAGE:                                        #
+# ./pom_edit.sh PROCESSOR1 PROCESSOR2 ...       #
+#       -- Where PROCESSOR1, PROCESSOR2 are     #
+#          processors listed in the Island Pom. #
+#################################################
 
+# Enable the script to be launched from everywhere
 SOURCE="${BASH_SOURCE[0]}"
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 SRC="$DIR/src/"
 
-FILE_FOLDER="$DIR/../island"
-FILE="./pom.xml"
+# Get the island folder
+ISLAND="$DIR/../island"
 
-name="GTtoLT"
+# Get the POM file (island folder)
+POM="./pom.xml"
 
-cd "$FILE_FOLDER"
+# TMP extension (used to avoid bugs, including on Mac OSX)
+TMP_EXT=".tmp"
+
+# Arguments for sed
+ARG_SED="-i$TMP_EXT -e"
+
+# Go to island folder
+cd "$ISLAND"
 
 # Comment all processors
-sed -i -e 's~\(<!--\)*\(<processor>.*</processor>\)\(-->\)*~<!--\2-->~g' ${FILE}
-sed -i -e "s~<!--\(<processor>.*"$name".*</processor>\)-->$~\1~g" ${FILE}
+sed ${ARG_SED} 's~\(<!--\)*\(<processor>.*</processor>\)\(-->\)*~<!--\2-->~g' ${POM}
+
+# Iterate over all arguments
+for arg in "$@"; do
+    # Uncomment the processor matching the current argument
+    sed ${ARG_SED} "s~<!--\(<processor>.*"$arg".*</processor>\)-->$~\1~g" ${POM}
+done
+
+rm ${POM}${TMP_EXT}
