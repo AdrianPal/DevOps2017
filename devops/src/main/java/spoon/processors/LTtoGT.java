@@ -10,7 +10,7 @@ import spoon.reflect.code.CtBinaryOperator;
 public class LTtoGT extends AbstractProcessor<CtBinaryOperator> {
 
     public void process(CtBinaryOperator elem) {
-        if (elem.getKind() == BinaryOperatorKind.LT)
-            elem.setKind(BinaryOperatorKind.GT);
+        if (elem.getKind() == BinaryOperatorKind.LT)    // If it's a "<"
+            elem.setKind(BinaryOperatorKind.GT);        // Set as a ">"
     }
 }

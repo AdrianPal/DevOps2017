@@ -11,11 +11,11 @@ public class GTtoLTNotInLoop extends AbstractProcessor<CtBinaryOperator> {
 
     @Override
     public boolean isToBeProcessed(CtBinaryOperator elem) {
-        if (elem.getKind() == BinaryOperatorKind.GT)
-            if (!elem.getParent().toString().startsWith("for"))
-                return true;
+        if (elem.getKind() == BinaryOperatorKind.GT)            // If it's a ">"
+            if (!elem.getParent().toString().startsWith("for")) // If we're not in a loop
+                return true;                                    // OK, we can edit it
 
-        return false;
+        return false; // Don't touch!
     }
 
     public void process(CtBinaryOperator elem) {
