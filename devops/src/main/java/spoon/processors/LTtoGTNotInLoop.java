@@ -5,7 +5,7 @@ import spoon.reflect.code.BinaryOperatorKind;
 import spoon.reflect.code.CtBinaryOperator;
 
 /**
- * Created by Adrian on 10/02/2017.
+ * Replace all < (Lower Than) in > (Greater Than), except those which are in loops.
  */
 public class LTtoGTNotInLoop extends AbstractProcessor<CtBinaryOperator> {
 

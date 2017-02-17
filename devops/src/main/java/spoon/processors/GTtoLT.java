@@ -7,7 +7,7 @@ import spoon.reflect.declaration.CtElement;
 import spoon.reflect.declaration.CtVariable;
 
 /**
- * Created by Adrian on 10/02/2017.
+ * Replace all > (Greater Than) in < (Lower Than).
  */
 public class GTtoLT extends AbstractProcessor<CtBinaryOperator> {
     public void process(CtBinaryOperator elem) {

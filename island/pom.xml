@@ -107,7 +107,7 @@
                         <processor>spoon.processors.GTtoLT</processor>
                         <processor>spoon.processors.GTtoLTNotInLoop</processor>
                         <processor>spoon.processors.CatchProcessor</processor>
-                        <processor>spoon.processors.TozProcessor</processor>
+                        <processor>spoon.processors.BrokenProcessor</processor>
                     </processors>
                 </configuration>
                 <dependencies>
