@@ -22,18 +22,18 @@ POM="./pom.xml"
 TMP_EXT=".tmp"
 
 # Arguments for sed
-ARG_SED="-i$TMP_EXT -e"
+ARG_SED='-i'$TMP_EXT' -e '':a'' -e ''N'' -e ''$!ba'' -e'
 
 # Go to island folder
 cd "$ISLAND"
 
 # Comment all processors
-sed ${ARG_SED} 's~\(<!--\)*\(<processor>.*</processor>\)\(-->\)*~<!--\2-->~g' ${POM}
+sed ${ARG_SED} 's/<processors>.*<\/processors>/<processors><\/processors>/g' ${POM}
 
 # Iterate over all arguments
 for arg in "$@"; do
     # Uncomment the processor matching the current argument
-    sed ${ARG_SED} "s~<!--\(<processor>.*"$arg".*</processor>\)-->$~\1~g" ${POM}
+    sed ${ARG_SED} 's/<\/processors>/<processor>'$arg'<\/processor><\/processors>/g' ${POM}
 done
 
 rm ${POM}${TMP_EXT}

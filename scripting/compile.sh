@@ -17,6 +17,7 @@ DEVOPS="$DIR/../devops" # Get the devops folder
 
 POM="$ISLAND/pom.xml"   # Get the POM file (island folder)
 PROC="$DEVOPS/src/main/java/spoon/processors"   # Get the POM file (island folder)
+PACKAGE="spoon.processors."
 
 TMP_EXT=".tmp"          # TMP extension (used to avoid bugs, including on Mac OSX)
 ARG_SED="-i$TMP_EXT -e" # Arguments for sed
@@ -29,7 +30,7 @@ for file in "$PROC"/*.java; do
     extension="${filename##*.}"
     filename="${filename%.*}"
 
-    ${SRC}/pom_edit.sh ${filename}
+    ${SRC}/pom_edit.sh ${PACKAGE}${filename}
     mvn clean test > ${OUTPUT}/${filename}_result.txt
     echo "+ ${filename} done!"
     echo
