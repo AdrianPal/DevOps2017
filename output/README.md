@@ -1,1 +1,1 @@
-﻿Output where results are placed.
+﻿Output where results are generated.
