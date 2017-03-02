@@ -101,14 +101,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <processors>
-                        <!--<processor>spoon.processors.LTtoGT</processor>
-                        <processor>spoon.processors.LTtoGTNotInLoop</processor>
-                        <processor>spoon.processors.GTtoLT</processor>
-                        <processor>spoon.processors.GTtoLTNotInLoop</processor>
-                        <processor>spoon.processors.CatchProcessor</processor>
-                        <processor>spoon.processors.BrokenProcessor</processor>-->
-                    </processors>
+                    <processors></processors>
                 </configuration>
                 <dependencies>
                     <dependency>

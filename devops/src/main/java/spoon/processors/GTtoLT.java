@@ -7,11 +7,11 @@ import spoon.reflect.declaration.CtElement;
 import spoon.reflect.declaration.CtVariable;
 
 /**
- * Replace all > (Greater Than) in < (Lower Than).
+ * Replace all >/>= (Greater Than/Equal) in < (Lower Than).
  */
 public class GTtoLT extends AbstractProcessor<CtBinaryOperator> {
     public void process(CtBinaryOperator elem) {
-        if (elem.getKind() == BinaryOperatorKind.GT)    // If it's a ">"
+        if (elem.getKind() == BinaryOperatorKind.GT || elem.getKind() == BinaryOperatorKind.GE)    // If it's a ">" or ">="
             elem.setKind(BinaryOperatorKind.LT);        // Set as a "<"
     }
 }
