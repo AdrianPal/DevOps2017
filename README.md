@@ -5,7 +5,7 @@ Nous nous sommes basés sur le projet ***Island*** de QGL réalisé l'année der
 
 ### Exécution
 
-Pour lancer le projet, rendez-vous dans le dossier ***[scripting](./scripting)***, et lancer le script ***run.sh*** avec la commande suivante :
+Pour lancer le projet, rendez-vous dans le dossier ***[scripting](./scripting)***, et lancer le script ***`run.sh`*** avec la commande suivante :
 
     ./run.sh
     
@@ -19,7 +19,7 @@ Nous avons un module principal ***SousEntendu*** et deux sous modules présents 
 
 ### Rapport
 
-Le rapport se trouve à la racine du projet, fichier ***Rapport - Groupe 3.pdf***
+Le rapport se trouve à la racine du projet, fichier ***[Rapport - Groupe 3.pdf](./Rapport%20-%20Groupe%203.pdf)***.
 
 ### Equipe
 
