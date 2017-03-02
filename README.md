@@ -5,7 +5,7 @@ Nous nous sommes basés sur le projet ***Island*** de QGL réalisé l'année der
 
 ### Exécution
 
-Pour lancer le projet, rendez-vous dans le dossier **/scripting**, et lancer le script ***run.sh*** avec la commande suivante :
+Pour lancer le projet, rendez-vous dans le dossier ***[scripting](./scripting)***, et lancer le script ***run.sh*** avec la commande suivante :
 
     ./run.sh
     
