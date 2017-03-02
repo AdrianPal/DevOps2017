@@ -23,10 +23,6 @@ Le rapport se trouve à la racine du projet, fichier ***[Rapport - Groupe 3.pdf]
 
 ### Equipe
 
-Matthieu BERGER
-Mathias CHEVALIER
-Marhold MÔNIER
-Adrian PALUMBO
-Arnaud ZAGO
+Matthieu BERGER, Mathias CHEVALIER, Marhold MÔNIER, Adrian PALUMBO, Arnaud ZAGO
 
 ######DevOps and Continous Testing - Polytech 2k17
